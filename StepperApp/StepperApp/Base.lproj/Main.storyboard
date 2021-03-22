@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StepperApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="X3y-9k-gSI">
+                                <rect key="frame" x="164" y="83" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="qYO-P2-amq"/>
+                                </connections>
+                            </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQS-lX-GG2">
+                                <rect key="frame" x="164" y="149" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="changeStepper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bva-gX-S2B"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUM-Vn-2ZA">
+                                <rect key="frame" x="114" y="87" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cQS-lX-GG2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4kb-45-Lay"/>
+                            <constraint firstItem="cQS-lX-GG2" firstAttribute="top" secondItem="X3y-9k-gSI" secondAttribute="bottom" constant="37" id="BQW-0q-TO8"/>
+                            <constraint firstItem="X3y-9k-gSI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="63" id="ESv-mg-kgr"/>
+                            <constraint firstItem="xUM-Vn-2ZA" firstAttribute="centerY" secondItem="X3y-9k-gSI" secondAttribute="centerY" id="UZ0-uO-sN4"/>
+                            <constraint firstItem="X3y-9k-gSI" firstAttribute="leading" secondItem="xUM-Vn-2ZA" secondAttribute="trailing" constant="8" symbolic="YES" id="ZjR-G6-9V0"/>
+                            <constraint firstItem="X3y-9k-gSI" firstAttribute="leading" secondItem="cQS-lX-GG2" secondAttribute="leading" id="lLi-ui-ccg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelValue" destination="xUM-Vn-2ZA" id="9ku-oE-9rH"/>
+                        <outlet property="stepperValue" destination="X3y-9k-gSI" id="vPQ-BR-B26"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
